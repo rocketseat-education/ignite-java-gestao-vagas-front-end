@@ -100,7 +100,7 @@ public class CompanyController {
     @PreAuthorize("hasRole('COMPANY')")
     public String createJobs(CreateJobsDTO jobs){
         var result = this.createJobService.execute(jobs, getToken());
-        return "redirect:/company/jobs";
+        return "redirect:/company/jobs/list";
     }
 
     @GetMapping("/jobs/list")
